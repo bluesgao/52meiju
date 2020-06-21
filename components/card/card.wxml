@@ -1,0 +1,7 @@
+<view class="card">
+	<view bindtap="onItemClick">
+		<image class="image" mode="aspectFill" src="图片地址" />
+		<text class="time">时间</text>
+		<view class="title">标题</view>
+	</view>
+</view>

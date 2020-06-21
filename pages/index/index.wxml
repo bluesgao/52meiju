@@ -1,45 +1,26 @@
-<view style="height: {{windowHeight}}px;">
-  <scroll-view bindscroll='layoutScroll' scroll-y="true" style="height: 100vh;">
-  <!-- swiper顶部图片轮播切换 -->
-    <!-- <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" 
-vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" class='swiper-home'>
-      <block wx:for="{{pictures}}" data-index="{{index}}" class='block-box' wx:key="{{index}}">
-        <swiper-item>
-          <image src='{{item}}' class='repair-img'></image>
-        </swiper-item>
-      </block>
-    </swiper> -->
+<view>
+	<view class="tab">
+		<view class="{{tab_index == 0 ? 'tab-active':''}}" data-index="0" catchtap="selectTab">热门</view>
+		<view class="{{tab_index == 1 ? 'tab-active':''}}" data-index="1" catchtap="selectTab">最新</view>
+	</view>
 
-    <scroll-view scroll-x="true" class="nav positionFixed">
-    <!-- 导航栏 -->
-      <view class='topTabSwiper'>
-        <view class='hot-tab' data-current="0" bindtap='checkCurrent'>
-          <view data-current="0" class='{{currentData == 0 ? "tab-title-select" : "tab-title"}}'>热门</view>
-          <view class='{{currentData == 0 ? "hot-tab-line" : ""}}' data-current="0"></view>
-        </view>
-        <view class='new-tab' data-current="1" bindtap='checkCurrent'>
-          <view data-current="1" class='{{currentData == 1 ? "tab-title-select" : "tab-title"}}'>最新</view>
-          <view class='{{currentData == 1 ? "new-tab-line" : ""}}' data-current="1"></view>
-        </view>
-      </view>
-    </scroll-view>
-
-    <!-- 切换0介绍的内容 -->
-    <view class='hot-page' wx:if="{{currentData==0}}">
-      <view wx:for="{{pictures}}" data-index="{{index}}" wx:key="{{index}}">
-        <image src='{{item}}' class='repair-img'></image>
-      </view>
-    </view>
-
-    <!-- 切换1推荐的内容 -->
-    <view class='new-page' wx:if="{{currentData==1}}">
-      <view wx:for="{{recommendPictures}}" data-index="{{index}}" wx:key="{{index}}">
-        <image src='{{item}}' class='recommend-img'></image>
-      </view>
-    </view>
-    
-    <!-- 切换2评价的内容 -->
-    <!-- <view class='three-page' wx:if="{{currentData==2}}">
-    </view> -->
-  </scroll-view>
+	<swiper style="height: {{windowHeight - 50}}px" bindchange="tabChange" current="{{tab_index}}">
+		<swiper-item>
+			<scroll-view style="height: 100%;" scroll-y bindscroll="scroll" bindscrolltolower="reactBottom" scroll-with-animation scroll-top="{{scrollTop0}}px">
+				<block wx:for="{{30}}" wx:key="{{index}}">
+					<!-- <card></card> -->
+					<card img='http://pic1.win4000.com/wallpaper/7/58981aef2947c.jpg' title='MidWest Pet' context='Secure double latch step-through door access, Exercise Pen / Pet Playpen folds flat for convenient storage' isShowBtns='{{true}}' isLiked='{{false}}' likeNumber='{{3000000}}' bind:like='handleLike'></card>
+				</block>
+			</scroll-view>
+		</swiper-item>
+		<swiper-item>
+			<scroll-view style="height: 100%;" scroll-y bindscroll="scroll" bindscrolltolower="reactBottom" scroll-with-animation scroll-top="{{scrollTop1}}px">
+				<block wx:for="{{30}}" wx:key="{{index}}">
+					<!-- <view class="item item2">{{index + 1}}</view> -->
+					<sale-card img='http://pic1.win4000.com/wallpaper/7/58981aef2947c.jpg' title='MidWest Pet MidWest Pet MidWest Pet MidWest Pet ' type='玩具' price='热度 {{index+10000}}' isShowDelete='{{true}}'></sale-card>
+				</block>
+			</scroll-view>
+		</swiper-item>
+	</swiper>
+	<view class="backTop" catchtap="backTop"></view>
 </view>

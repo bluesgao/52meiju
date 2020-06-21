@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "card": "../../components/title-card/title-card",
+    "sale-card": "../../components/sale-card/index"
+  }
 }
