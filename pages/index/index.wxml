@@ -1,32 +1,45 @@
-<!--index.wxml-->
-<!--导航条-->
-<view class="navbar">
-  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
-</view>
-<!--内容-->
-<!-- <view wx:if="{{currentTab==0}}">
-  <view class='info'>
-    <image src='/img/icon.png'></image>
-    <text>没有已关注</text>
-  </view>
-</view>
+<view style="height: {{windowHeight}}px;">
+  <scroll-view bindscroll='layoutScroll' scroll-y="true" style="height: 100vh;">
+  <!-- swiper顶部图片轮播切换 -->
+    <!-- <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" 
+vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" class='swiper-home'>
+      <block wx:for="{{pictures}}" data-index="{{index}}" class='block-box' wx:key="{{index}}">
+        <swiper-item>
+          <image src='{{item}}' class='repair-img'></image>
+        </swiper-item>
+      </block>
+    </swiper> -->
 
-<view wx:elif="{{currentTab==1}}">
-  <view class='info'>
-    <image src='/img/icon.png'></image>
-    <text>没有未关注</text>
-  </view>
-</view> -->
+    <scroll-view scroll-x="true" class="nav positionFixed">
+    <!-- 导航栏 -->
+      <view class='topTabSwiper'>
+        <view class='hot-tab' data-current="0" bindtap='checkCurrent'>
+          <view data-current="0" class='{{currentData == 0 ? "tab-title-select" : "tab-title"}}'>热门</view>
+          <view class='{{currentData == 0 ? "hot-tab-line" : ""}}' data-current="0"></view>
+        </view>
+        <view class='new-tab' data-current="1" bindtap='checkCurrent'>
+          <view data-current="1" class='{{currentData == 1 ? "tab-title-select" : "tab-title"}}'>最新</view>
+          <view class='{{currentData == 1 ? "new-tab-line" : ""}}' data-current="1"></view>
+        </view>
+      </view>
+    </scroll-view>
 
-<swiper class="swiper" current="{{currentTab}}" duration="300" bindchange="swiperChange">
-  <swiper-item>
-    <view class='info'>
-      <text>没有未关注</text>
+    <!-- 切换0介绍的内容 -->
+    <view class='hot-page' wx:if="{{currentData==0}}">
+      <view wx:for="{{pictures}}" data-index="{{index}}" wx:key="{{index}}">
+        <image src='{{item}}' class='repair-img'></image>
+      </view>
     </view>
-  </swiper-item>
-  <swiper-item>
-    <view class='info'>
-      <text>没有未关注</text>
+
+    <!-- 切换1推荐的内容 -->
+    <view class='new-page' wx:if="{{currentData==1}}">
+      <view wx:for="{{recommendPictures}}" data-index="{{index}}" wx:key="{{index}}">
+        <image src='{{item}}' class='recommend-img'></image>
+      </view>
     </view>
-  </swiper-item>
-</swiper>
+    
+    <!-- 切换2评价的内容 -->
+    <!-- <view class='three-page' wx:if="{{currentData==2}}">
+    </view> -->
+  </scroll-view>
+</view>
