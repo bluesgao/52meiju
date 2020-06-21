@@ -1,6 +1,32 @@
 <!--index.wxml-->
-<view class="container">
-<!-- 推荐 轮播-->
-<!-- 上新 轮播-->
-<!-- 精选 -->
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
 </view>
+<!--内容-->
+<!-- <view wx:if="{{currentTab==0}}">
+  <view class='info'>
+    <image src='/img/icon.png'></image>
+    <text>没有已关注</text>
+  </view>
+</view>
+
+<view wx:elif="{{currentTab==1}}">
+  <view class='info'>
+    <image src='/img/icon.png'></image>
+    <text>没有未关注</text>
+  </view>
+</view> -->
+
+<swiper class="swiper" current="{{currentTab}}" duration="300" bindchange="swiperChange">
+  <swiper-item>
+    <view class='info'>
+      <text>没有未关注</text>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='info'>
+      <text>没有未关注</text>
+    </view>
+  </swiper-item>
+</swiper>

@@ -1,13 +1,13 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/logs/logs",
+        "pages/search/search",
         "pages/profile/profile"
     ],
     "window": {
         "backgroundTextStyle": "dark",
         "navigationBarBackgroundColor": "#3281ff",
-        "navigationBarTitleText": "52美剧",
+        "navigationBarTitleText": "我爱追剧",
         "navigationBarTextStyle": "white"
     },
     "style": "v2",
@@ -25,13 +25,13 @@
                 "selectedIconPath": "imgs/tab/tab_home.png"
             },
             {
-                "pagePath": "pages/logs/logs",
+                "pagePath": "pages/search/search",
                 "text": "搜索",
                 "iconPath": "imgs/tab/tab_explore_normal.png",
                 "selectedIconPath": "imgs/tab/tab_explore.png"
             },
             {
-                "pagePath": "pages/logs/logs",
+                "pagePath": "pages/profile/profile",
                 "text": "我的",
                 "iconPath": "imgs/tab/tab_profile_normal.png",
                 "selectedIconPath": "imgs/tab/tab_profile.png"
