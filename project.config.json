@@ -4,16 +4,18 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
 		"autoAudits": false,
+		"scopeDataCheck": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
@@ -25,7 +27,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.11.0",
-	"appid": "wxdeddd207806f54a4",
+	"appid": "wxd1219a1700123800",
 	"projectname": "52meiju",
 	"debugOptions": {
 		"hidedInDevtools": []

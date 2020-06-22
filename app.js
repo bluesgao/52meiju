@@ -34,6 +34,14 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    url: {
+      base: "http://t.yushu.im",
+      comingSoon: "/v2/movie/coming_soon",
+      inTheaters: "/v2/movie/in_theaters",
+      top250: "/v2/movie/top250",
+      subject: "/v2/movie/subject/",
+      search: "/v2/movie/search"
+    }
   }
 })

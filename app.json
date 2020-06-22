@@ -1,8 +1,9 @@
 {
     "pages": [
-        "pages/index/index",
+        "pages/home/home",
         "pages/search/search",
-        "pages/profile/profile"
+        "pages/profile/profile",
+        "pages/index/index"
     ],
     "window": {
         "backgroundTextStyle": "dark",
@@ -19,19 +20,19 @@
         "backgroundColor": "#fff",
         "list": [
             {
-                "pagePath": "pages/index/index",
-                "iconPath": "imgs/tab/tab_home_normal.png",
-                "selectedIconPath": "imgs/tab/tab_home.png"
+                "pagePath": "pages/home/home",
+                "iconPath": "img/tab/tab_home_normal.png",
+                "selectedIconPath": "img/tab/tab_home.png"
             },
             {
                 "pagePath": "pages/search/search",
-                "iconPath": "imgs/tab/tab_explore_normal.png",
-                "selectedIconPath": "imgs/tab/tab_explore.png"
+                "iconPath": "img/tab/tab_explore_normal.png",
+                "selectedIconPath": "img/tab/tab_explore.png"
             },
             {
                 "pagePath": "pages/profile/profile",
-                "iconPath": "imgs/tab/tab_profile_normal.png",
-                "selectedIconPath": "imgs/tab/tab_profile.png"
+                "iconPath": "img/tab/tab_profile_normal.png",
+                "selectedIconPath": "img/tab/tab_profile.png"
             }
         ]
     }
