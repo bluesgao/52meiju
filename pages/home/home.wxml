@@ -1,0 +1,62 @@
+<!--pages/home/home.wxml-->
+<view>
+	<!-- 热门 -->
+	<view class="hot">
+		<view class="hot-header">
+			<view class="hot-header-title">热门</view>
+			<view class="hot-header-more">更多</view>
+		</view>
+		<scroll-view scroll-x="true">
+			<view class="hot-list">
+				<block wx:for="{{hotList}}" wx:key="hotList" wx:for-index="idx" wx:for-item="item">
+					<view class="hot-list-item">
+						<image class="hot-item-img" src="{{item.images.large}}"></image>
+						<view class="hot-item-name overflow">{{item.title}}</view>
+					</view>
+				</block>
+			</view>
+		</scroll-view>
+
+	</view>
+	<view class="top">
+		<view class="top-header">
+			<view class="top-header-title">排行</view>
+			<view class="top-header-more">更多</view>
+		</view>
+		<view class="top-body">
+			<view class="top-list">
+				<block wx:for="{{hotList}}" wx:key="hotList" wx:for-index="idx">
+					<view class="top-list-item">
+						<view class="top-item-left">
+							<image class="top-item-img" src="{{item.images.large}}"></image>
+						</view>
+						<view class="top-item-right">
+							<view class="top-item-row">
+								<text class="top-item-label">名称</text>
+								<view class="top-item-value overflow">{{item.title}}</view>
+							</view>
+							<view class="top-item-row">
+								<text class="top-item-label">类型</text>
+								<view class="top-item-value" wx:for="{{item.genres}}">{{item}}</view>
+							</view>
+							<view class="top-item-row">
+								<text class="top-item-label">年份</text>
+								<view class="top-item-value overflow">{{item.year}}</view>
+							</view>
+							<view class="top-item-row">
+								<text class="top-item-label">导演</text>
+								<view class="top-item-value" wx:for="{{item.directors}}">{{item.name}}</view>
+							</view>
+							<view class="top-item-row">
+								<text class="top-item-label">主演</text>
+								<view class="top-item-value" wx:for="{{item.casts}}">{{item.name}}</view>
+							</view>
+						</view>
+					</view>
+				</block>
+			</view>
+		</view>
+
+	</view>
+
+</view>
