@@ -37,19 +37,23 @@
 							</view>
 							<view class="top-item-row">
 								<text class="top-item-label">类型</text>
-								<view class="top-item-value" wx:for="{{item.genres}}">{{item}}</view>
+								<view class="top-item-value overflow" wx:for="{{item.genres}}">{{item}}</view>
 							</view>
-							<view class="top-item-row">
+							<!-- <view class="top-item-row">
 								<text class="top-item-label">年份</text>
 								<view class="top-item-value overflow">{{item.year}}</view>
-							</view>
+							</view> -->
 							<view class="top-item-row">
 								<text class="top-item-label">导演</text>
-								<view class="top-item-value" wx:for="{{item.directors}}">{{item.name}}</view>
+								<view class="top-item-value overflow" wx:for="{{item.directors}}">{{item.name}}</view>
 							</view>
 							<view class="top-item-row">
 								<text class="top-item-label">主演</text>
-								<view class="top-item-value" wx:for="{{item.casts}}">{{item.name}}</view>
+								<view class="top-item-value overflow" wx:for="{{item.casts}}">{{item.name}}</view>
+							</view>
+							<view class="top-item-row">
+								<text class="top-item-label">简介</text>
+								<view class="top-item-value top-item-summary">{{item.summary}}</view>
 							</view>
 						</view>
 					</view>

@@ -54,7 +54,7 @@
 }
 
 .top-list {
-
+    padding-bottom: 12rpx;
 }
 
 .top-list-item {
@@ -91,6 +91,7 @@
 
 .top-item-label{
     font-weight: bold;
+    height: 34rpx;
     font-size: 24rpx;
     padding-left: 4rpx;
     padding-right: 4rpx;
@@ -108,5 +109,15 @@
     text-align: center;
     color: #ccc;
     padding-right: 10rpx;
+}
+
+.top-item-summary{
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    align-content: center;
 }
 /*top-end*/

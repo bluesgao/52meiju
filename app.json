@@ -30,7 +30,7 @@
                 "selectedIconPath": "img/tab/tab_explore.png"
             },
             {
-                "pagePath": "pages/profile/profile",
+                "pagePath": "pages/index/index",
                 "iconPath": "img/tab/tab_profile_normal.png",
                 "selectedIconPath": "img/tab/tab_profile.png"
             }
