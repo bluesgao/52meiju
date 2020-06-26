@@ -1,29 +1,87 @@
-.key{
-    width:auto;
-    height:48rpx;
-    line-height: 48rpx;
-    background:rgba(246,246,246,1);
-    border-radius:30rpx;
-    padding: 5rpx 30rpx;
-    font-weight:300;
-    color: #4A4A4A;
-    float:left;
-    margin-right: 10rpx;
-    margin-bottom: 30rpx;
-    margin-left: 10rpx;
+.search-main{
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-warpper {
+  width: 620rpx;
+  height: 72rpx;
+  background: rgba(247, 247, 247, 1);
+  border-radius: 36rpx;
+  padding-left: 80rpx;
+  margin: auto;
+  font-size: 24rpx;
+}
+
+.search-warpper input{
+  line-height:72rpx;
+  height:72rpx;
+  width:500rpx;
+}
+
+.search-icon {
+  position: absolute;
+  left: 60rpx;
+  top: 23rpx;
+}
+
+.search-placeholder {
+  color: #cacaca;
+}
+
+.search-cancle{
+  position: absolute;
+  right: 40rpx;
+  top:15rpx;
+  width: 48rpx;
+  height: 48rpx;
+  z-index: 999;
+}
+
+  .search-hist-warpper{
+    position: fixed;
+    width:100%;
+    height:24rpx;
   }
   
-  .list{
+  .search-hist-header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 12rpx;
+    
+  }
+
+  .search-hist-header-title{
+    font-weight: bold;
+    font-size: 28rpx;
+ }
+ .search-hist-header-del{
+  font-size: 24rpx;
+  color: darkgray;
+ }
+
+ .search-hist-body{
+   height: 120rpx;
+   width: 100%;
+ }
+  .search-hist-list{
     padding-left: 10rpx;
+    display: flex;
+    flex-wrap:wrap;
   }
   
-  .search_title{
-     margin: 40rpx 20rpx 40rpx 30rpx;
-  }
-  .search_title image{
-      width: 48rpx;
-      height: 48rpx;
-  }
+.search-hist-item{
+  font-weight: normal;
+  height: 34rpx;
+  font-size: 24rpx;
+  padding:2rpx;
+  margin:4rpx;
+  text-align: center;
+  border: 1rpx solid #aaa;
+  border-radius: 15rpx;
+}
   
   .search_result{
     position:fixed;
@@ -52,57 +110,9 @@
   .search_result>view:nth-last-child(1){
      border-bottom: none;
   }
+    
   
-  .cancle_btn{
-    position: absolute;
-    right: 40rpx;
-    top:15rpx;
-    width: 48rpx;
-    height: 48rpx;
-    z-index: 999;
-  }
-  
-  .search_input {
-    width: 620rpx;
-    height: 72rpx;
-    background: rgba(247, 247, 247, 1);
-    border-radius: 36rpx;
-    padding-left: 80rpx;
-    margin: auto;
-    font-size: 24rpx;
-  }
-  
-  .search_input input{
-    line-height:72rpx;
-    height:72rpx;
-    width:500rpx;
-  }
-  
-  .search_icon {
-    position: absolute;
-    left: 60rpx;
-    top: 23rpx;
-  }
-  
-  .search_placeholder {
-    color: #cacaca;
-  }
-  
-  .cancle_btn{
-    position: absolute;
-    right: 40rpx;
-    top:15rpx;
-    width: 48rpx;
-    height: 48rpx;
-    z-index: 999;
-  }
-  
-  .container {
-    padding: 0 0 100rpx;
-    font-size: 29rpx;
-    overflow: scroll;
-  }
-  
+    
   .no_more {
     text-align: center;
     font-weight: 400;
